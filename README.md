@@ -3,7 +3,7 @@
 ## Installation
 
 ```sh
-yarn add tslint-config-suiyobi
+yarn add -D tslint-config-suiyobi
 ```
 
 ## Usage
