@@ -3,12 +3,12 @@
   "author": "wSedlacek",
   "name": "tslint-config-suiyobi",
   "description": "For those who don't have enough rules in their life",
-  "version": "0.1.3",
-  "repository": "github:wsedlacek/tslint-config-wsedlacek",
+  "version": "0.1.4",
+  "repository": "github:wsedlacek/tslint-config-suiyobi",
   "bugs": {
-    "url": "https://github.com/wsedlacek/tslint-config-wsedlacek/issues"
+    "url": "https://github.com/wsedlacek/tslint-config-suiyobi/issues"
   },
-  "homepage": "https://github.com/wsedlacek/tslint-config-wsedlacek/#readme",
+  "homepage": "https://github.com/wsedlacek/tslint-config-suiyobi/#readme",
   "keywords": [
     "angular",
     "clean",
