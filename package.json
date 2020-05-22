@@ -3,7 +3,7 @@
   "author": "wSedlacek",
   "name": "tslint-config-suiyobi",
   "description": "For those who don't have enough rules in their life",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "repository": "github:wsedlacek/tslint-config-wsedlacek",
   "bugs": {
     "url": "https://github.com/wsedlacek/tslint-config-wsedlacek/issues"
