@@ -12,6 +12,6 @@ In `tslint.json`
 
 ```json
 {
-  "extends": "tslint-config-airbnb"
+  "extends": "tslint-config-suiyobi"
 }
 ```
