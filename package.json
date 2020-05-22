@@ -3,7 +3,7 @@
   "author": "wSedlacek",
   "name": "tslint-config-suiyobi",
   "description": "For those who don't have enough rules in their life",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "repository": "github:wsedlacek/tslint-config-wsedlacek",
   "bugs": {
     "url": "https://github.com/wsedlacek/tslint-config-wsedlacek/issues"
@@ -45,12 +45,12 @@
     "prettier": "2.0.5",
     "rxjs": "^6.5.5",
     "tslib": "^1.10.0",
-    "tslint": "^5.20.1",
+    "tslint": "^5.11.0",
     "typescript": "^3.8.3",
     "zone.js": "^0.10.3"
   },
   "peerDependencies": {
-    "tslint": "^5.20.1",
+    "tslint": "^5.11.0",
     "tslint-override": "^1.0.0"
   }
 }
