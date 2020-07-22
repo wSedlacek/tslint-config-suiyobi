@@ -22,35 +22,35 @@
     "commitmsg": "commitlint -E HUSKY_GIT_PARAMS"
   },
   "dependencies": {
-    "@nrwl/workspace": "^9.3.0",
-    "angular-tslint-rules": "^1.20.4",
-    "codelyzer": "~5.2.2",
-    "rxjs-tslint-rules": "^4.32.0",
-    "tslint-angular": "^3.0.2",
-    "tslint-clean-code": "^0.2.10",
-    "tslint-config-airbnb": "^5.11.2",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-override": "^1.0.0",
-    "tslint-plugin-prettier": "^2.3.0",
-    "tslint-sonarts": "^1.9.0",
-    "typescript-tslint-plugin": "^0.5.5"
+    "@nrwl/workspace": "*",
+    "angular-tslint-rules": "*",
+    "codelyzer": "*",
+    "rxjs-tslint-rules": "*",
+    "tslint-angular": "*",
+    "tslint-clean-code": "*",
+    "tslint-config-airbnb": "*",
+    "tslint-config-prettier": "*",
+    "tslint-override": "*",
+    "tslint-plugin-prettier": "*",
+    "tslint-sonarts": "*",
+    "typescript-tslint-plugin": "*"
   },
   "devDependencies": {
-    "@angular/compiler": "^9.1.9",
-    "@angular/core": "^9.1.9",
-    "@commitlint/cli": "^9.0.0",
-    "@commitlint/config-conventional": "^9.0.0",
+    "@angular/compiler": "^10.0.4",
+    "@angular/core": "^10.0.4",
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
     "conventional-changelog-cli": "^2.0.34",
     "husky": "^4.2.5",
     "prettier": "2.0.5",
-    "rxjs": "^6.5.5",
-    "tslib": "^1.10.0",
-    "tslint": "^5.11.0",
-    "typescript": "^3.8.3",
+    "rxjs": "^6.6.0",
+    "tslib": "^2.0.0",
+    "tslint": "^5.20.1",
+    "typescript": "^3.9.7",
     "zone.js": "^0.10.3"
   },
   "peerDependencies": {
-    "tslint": "^5.11.0",
-    "tslint-override": "^1.0.0"
+    "tslint": "^5.20.1",
+    "tslint-override": "*"
   }
 }
