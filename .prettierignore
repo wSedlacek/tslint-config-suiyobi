@@ -1,0 +1,14 @@
+# Build directory
+dist/
+
+# Configuration and npm settings
+*.json
+
+# Definition files
+*.d.ts
+
+# Test files
+test-data/NoUnnecessarySemicolonsTestInput.ts
+
+# Files from package for backward compatibility
+build-tasks/back-compat

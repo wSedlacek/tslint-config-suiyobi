@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "alwaysStrict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "strictFunctionTypes": true,
+        "strictPropertyInitialization": true,
+        "strictNullChecks": true,
+        "declaration": true,
+        "jsx": "react",
+        "lib": ["es6", "dom", "scripthost"],
+        "module": "commonjs",
+        "outDir": "dist",
+        "removeComments": true,
+        "sourceMap": false,
+        "skipLibCheck": true,
+        "target": "es5",
+        "downlevelIteration": true,
+        "resolveJsonModule": true,
+    },
+    "include": ["src"]
+}

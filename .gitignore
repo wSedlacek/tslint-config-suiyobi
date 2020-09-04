@@ -1,1 +1,6 @@
 node_modules/
+
+
+# Generated for builds
+**/dist/
+rule-metadata.json
