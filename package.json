@@ -3,7 +3,7 @@
   "name": "tslint-config-suiyobi",
   "license": "MIT",
   "description": "For those who don't have enough rules in their life",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "repository": "github:wsedlacek/tslint-config-suiyobi",
   "bugs": {
     "url": "https://github.com/wsedlacek/tslint-config-suiyobi/issues"
@@ -56,12 +56,10 @@
   },
   "dependencies": {
     "@nrwl/workspace": "latest",
-    "angular-tslint-rules": "latest",
     "codelyzer": "latest",
-    "doctrine": "^3.0.0",
-    "immutable": "^4.0.0-rc.12",
+    "doctrine": "latest",
+    "immutable": "latest",
     "rxjs-tslint-rules": "latest",
-    "tslint-angular": "latest",
     "tslint-clean-code": "latest",
     "tslint-override": "latest",
     "tslint-plugin-prettier": "latest",
