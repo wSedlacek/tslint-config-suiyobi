@@ -1,0 +1,7 @@
+{
+  "defaultSeverity": "error",
+  "rules": {
+    "ngrx-no-effect-decorator": true
+  },
+  "rulesDirectory": ["../../../dist/rules"]
+}

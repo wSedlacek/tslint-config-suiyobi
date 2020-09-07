@@ -1,0 +1,42 @@
+import { of } from 'rxjs'
+import { map, exhaustMap } from 'rxjs/operators'
+import { Store, select, createSelector } from '@ngrx/store'
+
+const store: Store<any> = {};
+
+const selectCustomers = createSelector(
+  (state: any) => state.customers,
+  customers => customers
+)
+
+const selectorsObj = {
+  selectCustomers
+}
+
+store.pipe(select('customers'))
+                  ~~~~~~~~~~~                           [selector-for-select]
+
+store.pipe(select('customers', 'orders'))
+                  ~~~~~~~~~~~                           [selector-for-select]
+                               ~~~~~~~~                 [selector-for-select]
+
+store.pipe(select(state => state.customers))
+                  ~~~~~~~~~~~~~~~~~~~~~~~~              [selector-for-select]
+
+store.pipe(select(state => state.customers.orders))
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       [selector-for-select]
+
+store.pipe(select(selectCustomers))
+
+store.pipe(select(selectorsObj.selectCustomers))
+
+// https://github.com/timdeschryver/ngrx-tslint-rules/issues/4
+of('hello world').pipe(
+  exhaustMap(() => this.store.pipe(select(selectCustomers)))
+)
+
+of('hello world').pipe(
+  map(s => s.toUpperCase())
+)
+
+[selector-for-select]: Using string or props drilling is not preferred, use a selector instead
