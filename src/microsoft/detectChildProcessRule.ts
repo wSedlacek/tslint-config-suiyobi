@@ -17,9 +17,9 @@ export class Rule extends Lint.Rules.AbstractRule {
     description: 'Detects instances of child_process and child_process.exec',
     rationale: Lint.Utils.dedent`
             It is dangerous to pass a string constructed at runtime as the first argument to the child_process.exec().
-            <code>child_process.exec(cmd)</code> runs <code>cmd</code> as a shell command which allows attacker 
+            <code>child_process.exec(cmd)</code> runs <code>cmd</code> as a shell command which allows attacker
             to execute malicious code injected into <code>cmd</code> string.
-            Instead of <code>child_process.exec(cmd)</code> you should use <code>child_process.spawn(cmd)</code> 
+            Instead of <code>child_process.exec(cmd)</code> you should use <code>child_process.spawn(cmd)</code>
             or specify the command as a literal, e.g. <code>child_process.exec('ls')</code>.
         `,
     options: null, // tslint:disable-line:no-null-keyword
@@ -48,9 +48,9 @@ function getProhibitedImportedNames(namedImports: ts.NamedImports) {
       } else {
         originalIdentifier = x.propertyName;
       }
-      return tsutils.getIdentifierText(originalIdentifier) === FORBIDDEN_FUNCTION_NAME;
+      return originalIdentifier?.text === FORBIDDEN_FUNCTION_NAME;
     })
-    .map((x) => tsutils.getIdentifierText(x.name));
+    .map((x) => x.name.text);
 }
 
 function isNotUndefined<TValue>(value: TValue | undefined): value is TValue {
@@ -66,10 +66,10 @@ function getProhibitedBoundNames(namedBindings: ts.ObjectBindingPattern) {
       let importedName: string | undefined;
 
       if (x.propertyName === undefined) {
-        importedName = tsutils.getIdentifierText(x.name);
+        importedName = x.name.text;
       } else {
         if (ts.isIdentifier(x.propertyName)) {
-          importedName = tsutils.getIdentifierText(x.propertyName);
+          importedName = x.propertyName.text;
         } else if (ts.isStringLiteral(x.propertyName)) {
           importedName = x.propertyName.text;
         }
@@ -78,7 +78,7 @@ function getProhibitedBoundNames(namedBindings: ts.ObjectBindingPattern) {
     })
     .map((x) => {
       if (ts.isIdentifier(x.name)) {
-        return tsutils.getIdentifierText(x.name);
+        return x.name.text;
       }
       return undefined;
     })
@@ -113,7 +113,7 @@ function walk(ctx: Lint.WalkContext<void>) {
 
       if (tsutils.isVariableDeclaration(node.parent)) {
         if (tsutils.isIdentifier(node.parent.name)) {
-          alias = tsutils.getIdentifierText(node.parent.name);
+          alias = node.parent.name.text;
         } else if (tsutils.isObjectBindingPattern(node.parent.name)) {
           importedNames = getProhibitedBoundNames(node.parent.name);
         }
@@ -159,11 +159,11 @@ function walk(ctx: Lint.WalkContext<void>) {
 
     if (node.importClause !== undefined) {
       if (node.importClause.name !== undefined) {
-        alias = tsutils.getIdentifierText(node.importClause.name);
+        alias = node.importClause.name.text;
       }
       if (node.importClause.namedBindings !== undefined) {
         if (tsutils.isNamespaceImport(node.importClause.namedBindings)) {
-          alias = tsutils.getIdentifierText(node.importClause.namedBindings.name);
+          alias = node.importClause.namedBindings.name.text;
         } else if (tsutils.isNamedImports(node.importClause.namedBindings)) {
           importedNames = getProhibitedImportedNames(node.importClause.namedBindings);
         }
