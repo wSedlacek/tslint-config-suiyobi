@@ -278,10 +278,8 @@ module.exports = {
       'member-access': true,
       'missing-optional-annotation': true,
       'mocha-avoid-only': true,
-      'mocha-no-side-effect-code': true,
       'mocha-unneeded-done': true,
       'no-any': true,
-      'no-backbone-get-set-outside-model': true,
       'no-banned-terms': true,
       'no-boolean-literal-compare': true,
       'no-constant-condition': true,
@@ -313,7 +311,6 @@ module.exports = {
       'no-single-line-block-comment': true,
       'no-string-based-set-immediate': true,
       'no-string-based-set-interval': true,
-      'no-string-based-set-timeout': true,
       'no-suspicious-comment': true,
       'no-this-assignment': [true, 'allow-destructuring'],
       'no-typeof-undefined': true,
@@ -350,6 +347,11 @@ module.exports = {
       'no-unexternalized-strings': false,
       'no-var-self': false,
       'valid-typeof': false,
+      'mocha-no-side-effect-code': false,
+      'no-string-based-set-timeout': false,
+
+      // tslint-sonarlint disabled rules
+      'no-useless-cast': false,
 
       // tslint-sonarlint enabled rules
       'arguments-order': true,
@@ -410,7 +412,6 @@ module.exports = {
       'no-unthrown-error': true,
       'no-unused-array': true,
       'no-use-of-empty-return-value': true,
-      'no-useless-cast': true,
       'no-useless-catch': true,
       'no-useless-increment': true,
       'no-useless-intersection': true,
@@ -488,9 +489,7 @@ module.exports = {
       'min-class-cohesion': false,
       'newspaper-order': false,
       'no-feature-envy': false,
-
-      // Clean Code with custom configurations
-      'id-length': [true, { exceptions: ['T', 'e', 'm'] }],
+      'id-length': false,
 
       // Clean Code enabled
       'max-func-args': true,
