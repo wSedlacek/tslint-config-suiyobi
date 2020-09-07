@@ -3,7 +3,7 @@
   "name": "tslint-config-suiyobi",
   "license": "MIT",
   "description": "For those who don't have enough rules in their life",
-  "version": "0.2.2",
+  "version": "0.2.5-alpha7",
   "repository": "github:wsedlacek/tslint-config-suiyobi",
   "bugs": {
     "url": "https://github.com/wsedlacek/tslint-config-suiyobi/issues"
@@ -26,44 +26,17 @@
     "dist"
   ],
   "scripts": {
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "commitmsg": "commitlint -E HUSKY_GIT_PARAMS",
-    "clean": "rimraf dist",
-    "copy:back-compat": "cpy \"**/*.js\" ../../dist/build --cwd=\"build-tasks/back-compat\" --parents",
-    "copy:config-json": "node build-tasks/copy-config-json.js",
-    "copy:json": "cpy \"src/**/*.json\" dist --parents",
-    "copy:meta": "cpy README.md dist/build --parents",
-    "copy:package": "cpy \"**/*.js\" \"**/*.json\" \"!tests/**\" \"!references.js\" \"tests/TestHelper.js\" \"tests/TestHelper.d.ts\" ../build --cwd=\"dist/src\" --parents",
-    "create-rule": "node build-tasks/create-rule.js",
-    "generate:latest-config": "node build-tasks/generate-latest-config.js",
-    "generate:sdl-report": "node build-tasks/generate-sdl-report.js",
-    "generate:rule-metadata": "node build-tasks/generate-rule-metadata.js",
-    "generate:package-json-for-npm": "node build-tasks/generate-package-json-for-npm.js",
-    "lint:rules": "tslint -p tsconfig.json -t stylish -c tslint.json -e \"src/tests/**\" \"src/**/*.ts\"",
-    "lint:tests": "tslint -p tsconfig.json -t stylish -c src/tests/tslint.json -e src/tests/references.ts \"src/tests/**/*.ts\"",
-    "prepublishOnly": "run-s tsc:src",
-    "prettier": "prettier --write \"**/*.{js,ts,tsx,json,md}\"",
-    "start": "npm-run-all clean copy:json watch:src",
-    "test:mocha": "mocha \"dist/src/tests/**/*.js\" --timeout 5000",
-    "test:rules": "tslint -r dist/src --test \"tests/**\"",
-    "test": "npm-run-all clean copy:json tsc:src test:* tslint:check lint:* validate:* copy:package generate:* copy:meta copy:config-json copy:back-compat",
-    "tsc:src": "tsc",
-    "tslint:check": "tslint-config-prettier-check ./tslint.json",
-    "validate:documentation": "node build-tasks/validate-documentation.js",
-    "validate:rules-order": "node build-tasks/validate-rules-order.js",
-    "watch:run-tests": "node build-tasks/watch-run-tests.js",
-    "watch:src": "tsc --watch"
+    "build": "tsc"
   },
   "dependencies": {
-    "@nrwl/workspace": "latest",
-    "codelyzer": "latest",
-    "doctrine": "latest",
-    "immutable": "latest",
+    "@angular-devkit/schematics": "^10.1.0",
+    "doctrine": "^3.0.0",
+    "immutable": "^4.0.0-rc.12",
     "rxjs-tslint-rules": "latest",
     "tslint-clean-code": "latest",
-    "tslint-override": "latest",
     "tslint-plugin-prettier": "latest",
-    "tsutils": "^2.27.2 <2.29.0",
+    "tsutils": "^3.17.1",
+    "tsutils-etc": "^1.3.1",
     "typescript-tslint-plugin": "latest"
   },
   "devDependencies": {
@@ -71,6 +44,7 @@
     "@angular/core": "^10.1.0",
     "@commitlint/cli": "^9.1.2",
     "@commitlint/config-conventional": "^9.1.2",
+    "@ngrx/store": "^10.0.0",
     "@types/chai": "4.2.12",
     "@types/jest": "^26.0.13",
     "@types/mocha": "8.0.3",
@@ -78,10 +52,11 @@
     "chai": "4.2.0",
     "chalk": "^4.1.0",
     "chokidar": "^3.4.2",
+    "codelyzer": "6.0.0",
     "conventional-changelog-cli": "^2.1.0",
     "cpy-cli": "^3.1.1",
     "glob": "^7.1.6",
-    "husky": "^4.2.5",
+    "husky": "^4.3.0",
     "inquirer": "^7.3.3",
     "lint-staged": "^10.3.0",
     "mkdirp": "^1.0.4",
@@ -89,16 +64,15 @@
     "npm-run-all": "^4.1.5",
     "prettier": "2.1.1",
     "rimraf": "^3.0.2",
-    "rxjs": "^6.6.2",
+    "rxjs": "^6.6.3",
     "strip-json-comments": "^3.1.1",
     "tslib": "^2.0.1",
-    "tslint": "^6.1.3",
+    "tslint": ">=6.1.3",
     "typescript": "^4.0.2",
     "underscore": "1.11.0",
     "zone.js": "^0.10.3"
   },
   "peerDependencies": {
-    "tslint": ">=5.20.1",
-    "tslint-override": "*"
+    "tslint": ">=5.20.1"
   }
 }
