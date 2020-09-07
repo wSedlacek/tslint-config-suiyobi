@@ -7,9 +7,9 @@ This can not be applied to `.tsx` and `.jsx` files because the `<T>` syntax is h
 ```ts
 // Not passing
 let foo = bar as number;
-let baz = bar as any as string;
+let baz = (bar as any) as string;
 
 // Passing
 let foo = <number>bar;
-let baz = <string><any>bar;
+let baz = <string>(<any>bar);
 ```

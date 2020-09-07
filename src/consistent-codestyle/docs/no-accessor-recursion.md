@@ -11,8 +11,8 @@ let obj = {
   },
   set foo(v) {
     this.foo = v;
-  }
-}
+  },
+};
 
 // Passing
 let obj = {
@@ -27,6 +27,6 @@ let obj = {
   },
   set bar(v) {
     that.bar = v;
-  }
-}
+  },
+};
 ```

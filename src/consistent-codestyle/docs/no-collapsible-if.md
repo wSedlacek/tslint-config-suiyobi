@@ -8,8 +8,7 @@ Not passing:
 
 ```ts
 /* 1 */
-if (foo)
-  if (bar);
+if (foo) if (bar);
 /* 2 */
 if (foo) {
   if (bar) {

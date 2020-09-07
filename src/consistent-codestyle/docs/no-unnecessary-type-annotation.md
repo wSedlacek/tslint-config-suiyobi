@@ -10,11 +10,11 @@ Finds type annotations of variables and parameters that can be removed because t
 const foo: 1 = 1;
 const foo: number = 1;
 let foo: number = 1;
-const arr: string[] = ["foo", "bar"];
+const arr: string[] = ['foo', 'bar'];
 
-const myVerboseSignature: (a: number) => number = function(a: number): number {
-    return a;
-}
+const myVerboseSignature: (a: number) => number = function (a: number): number {
+  return a;
+};
 
 declare function takeCallback(cb: (a: string) => void): void;
 takeCallback((a: string) => a);

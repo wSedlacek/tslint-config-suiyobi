@@ -3,7 +3,7 @@
 Disallows reassigning parameters that are considered constants. This rule is similar to tslint's [`no-parameter-reassignent`](https://palantir.github.io/tslint/rules/no-parameter-reassignment/) but allows you to explicitly declare which parameter is a constant with JsDoc `/** @const */`
 
 ```ts
-function fn(/**@const*/foo, bar) {
+function fn(/**@const*/ foo, bar) {
   foo++; // error on this line
   bar++; // no error
 }
@@ -15,11 +15,13 @@ class C {
   }
 }
 
-function fn(/**@constant*/foo) { // also works with @constant tag
+function fn(/**@constant*/ foo) {
+  // also works with @constant tag
   foo++; // error on this line
 }
 
-function fn({ // also works with destructured parameters
+function fn({
+  // also works with destructured parameters
   /**@const*/ foo,
   baz: /**@const*/ bar,
 }) {

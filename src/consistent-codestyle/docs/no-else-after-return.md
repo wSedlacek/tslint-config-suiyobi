@@ -27,7 +27,8 @@ Enable this option if you prefer `else if` blocks after `return` statements:
 ```js
 if (condition) {
   return 'foo';
-} else if (otherCondition) { // this is allowed with the option
+} else if (otherCondition) {
+  // this is allowed with the option
   return 'bar';
 }
 
@@ -35,7 +36,8 @@ if (condition) {
   return 'foo';
 } else if (otherCondition) {
   return 'bar';
-} else { // this is still not allowed with the option
+} else {
+  // this is still not allowed with the option
   return 'baz';
 }
 ```
