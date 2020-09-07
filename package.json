@@ -3,7 +3,7 @@
   "name": "tslint-config-suiyobi",
   "license": "MIT",
   "description": "For those who don't have enough rules in their life",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "repository": "github:wsedlacek/tslint-config-suiyobi",
   "bugs": {
     "url": "https://github.com/wsedlacek/tslint-config-suiyobi/issues"
