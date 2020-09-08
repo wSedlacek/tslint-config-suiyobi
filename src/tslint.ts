@@ -6,6 +6,7 @@ module.exports = {
   },
   rulesDirectory: moduleSpecificArray({
     common: [
+      resolveRules('tslint-etc/dist/rules'),
       resolveRules('tslint-clean-code/dist/src'),
       resolveRules('tslint-config-suiyobi/microsoft'),
       resolveRules('tslint-config-suiyobi/eslint/rules'),
@@ -485,7 +486,7 @@ module.exports = {
       'prefer-const-enum': true,
       'prefer-while': true,
 
-      // Clean Code international disabled
+      // Clean Code intentionally disabled
       'min-class-cohesion': false,
       'newspaper-order': false,
       'no-feature-envy': false,
@@ -498,6 +499,21 @@ module.exports = {
       'no-for-each-push': true,
       'prefer-dry-conditionals': true,
       'try-catch-first': true,
+
+      // tslint-etc intentionally disabled
+      'ban-imports': false,
+      'expect-deprecation': false,
+      'expect-type': false,
+      'no-assign-mutated-array': false,
+      'no-dtslint-typo': false,
+      'no-enum': false,
+      'no-unused-declaration': false,
+
+      // tslint-etc enabled
+      'no-const-enum': true,
+      'no-implicit-any-catch': true,
+      'no-unsafe-callback-scope': true,
+      'throw-error': true,
     },
     angular: {
       'directive-selector': [true, 'attribute', 'app', 'camelCase'],
