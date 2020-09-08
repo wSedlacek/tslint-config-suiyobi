@@ -205,7 +205,6 @@ module.exports = {
           'static-method-regex': /^[a-z$][\w\d]+$/,
         },
       ],
-      'interface-name': [true, 'always-prefix'],
       'member-ordering': [
         true,
         {
@@ -250,6 +249,7 @@ module.exports = {
       // Core rules international disabled
       'completed-docs': false,
       'export-name': false,
+      'interface-name': false,
       'max-classes-per-file': false,
       'no-empty': false,
       'no-floating-promises': false,
