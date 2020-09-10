@@ -3133,7 +3133,7 @@ tslint-clean-code@latest:
     memoize-decorator "^1.0.2"
     tsutils "2.7.1"
 
-tslint-etc@^1.13.7:
+tslint-etc@latest:
   version "1.13.7"
   resolved "https://registry.yarnpkg.com/tslint-etc/-/tslint-etc-1.13.7.tgz#3fc6dacc21b3ffa2e727398b7a8d7099dbb95942"
   integrity sha512-v66dIwtWwc1epHH/KjrUnl97oMRwuoSOYdh0YNHGKwZvtxJzM1Afb23ugfrj028+DZoR1vCxb4/YV7eXgTn2nw==
@@ -3142,6 +3142,11 @@ tslint-etc@^1.13.7:
     tslib "^2.0.0"
     tsutils "^3.0.0"
     tsutils-etc "^1.0.0"
+
+tslint-plugin-decorator-member-ordering@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/tslint-plugin-decorator-member-ordering/-/tslint-plugin-decorator-member-ordering-0.0.1.tgz#8f950340762b8fe556c3b58cb7a058a645d16592"
+  integrity sha512-n3De8+cYTGYhu0RnehCv+owVdWTiG7k5eLJ3IBAqm3Kdd7Lu5sQKsJahLcDMhyqqPaQdsDWBgpm1ouRQtgJq/Q==
 
 tslint-plugin-prettier@latest:
   version "2.3.0"

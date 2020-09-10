@@ -11,6 +11,7 @@ module.exports = {
       resolveRules('tslint-config-suiyobi/microsoft'),
       resolveRules('tslint-config-suiyobi/eslint/rules'),
       resolveRules('tslint-config-suiyobi/sonarlint/rules'),
+      resolveRules('tslint-plugin-decorator-member-ordering'),
       resolveRules('tslint-config-suiyobi/consistent-codestyle/rules'),
     ],
     angular: [resolveRules('codelyzer')],
@@ -195,6 +196,75 @@ module.exports = {
       deprecation: {
         severity: 'warn',
       },
+      'decorator-member-ordering': [
+        true,
+        {
+          alphabetize: true,
+          order: [
+            'public-constructor',
+            'protected-constructor',
+            'private-constructor',
+
+            'public-static-field',
+            'protected-static-field',
+            'private-static-field',
+
+            'public-abstract-field',
+            'protected-abstract-field',
+            'private-abstract-field',
+
+            'public-abstract-accessor',
+            'protected-abstract-accessor',
+            'private-abstract-accessor',
+
+            'public-decorated-field',
+            'protected-decorated-field',
+            'private-decorated-field',
+
+            'public-decorated-accessor',
+            'protected-decorated-accessor',
+            'private-decorated-accessor',
+
+            'public-readonly-field',
+            'protected-readonly-field',
+            'private-readonly-field',
+
+            'public-static-accessor',
+            'protected-static-accessor',
+            'private-static-accessor',
+
+            'public-instance-field',
+            'protected-instance-field',
+            'private-instance-field',
+
+            'public-instance-accessor',
+            'protected-instance-accessor',
+            'private-instance-accessor',
+
+            'ng-instance-method',
+
+            'public-decorated-method',
+            'protected-decorated-method',
+            'private-decorated-method',
+
+            'public-abstract-method',
+            'protected-abstract-method',
+            'private-abstract-method',
+
+            'public-instance-method',
+            'protected-instance-method',
+            'private-instance-method',
+
+            'public-static-accessor',
+            'protected-static-accessor',
+            'private-static-accessor',
+
+            'public-static-method',
+            'protected-static-method',
+            'private-static-method',
+          ],
+        },
+      ],
       'function-name': [
         true,
         {
@@ -203,35 +273,6 @@ module.exports = {
           'private-method-regex': /^[a-z$][\w\d]+$/,
           'protected-method-regex': /^[a-z$][\w\d]+$/,
           'static-method-regex': /^[a-z$][\w\d]+$/,
-        },
-      ],
-      'member-ordering': [
-        true,
-        {
-          alphabetize: true,
-          order: [
-            'public-constructor',
-            'protected-constructor',
-            'private-constructor',
-            'public-static-field',
-            'protected-static-field',
-            'private-static-field',
-            'public-instance-field',
-            'protected-instance-field',
-            'private-instance-field',
-            'public-static-method',
-            'protected-static-method',
-            'public-static-accessor',
-            'protected-static-accessor',
-            'private-static-method',
-            'private-static-accessor',
-            'public-instance-method',
-            'protected-instance-method',
-            'public-instance-accessor',
-            'protected-instance-accessor',
-            'private-instance-method',
-            'private-instance-accessor',
-          ],
         },
       ],
       'no-inferrable-types': [true, 'ignore-params'],
@@ -251,6 +292,7 @@ module.exports = {
       'export-name': false,
       'interface-name': false,
       'max-classes-per-file': false,
+      'member-ordering': false,
       'no-empty': false,
       'no-floating-promises': false,
       'no-implicit-dependencies': false,

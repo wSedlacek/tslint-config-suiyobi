@@ -3,7 +3,7 @@
   "name": "tslint-config-suiyobi",
   "license": "MIT",
   "description": "For those who don't have enough rules in their life",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "repository": "github:wsedlacek/tslint-config-suiyobi",
   "bugs": {
     "url": "https://github.com/wsedlacek/tslint-config-suiyobi/issues"
@@ -36,6 +36,7 @@
     "rxjs-tslint-rules": "latest",
     "tslint-clean-code": "latest",
     "tslint-etc": "latest",
+    "tslint-plugin-decorator-member-ordering": "^0.0.1",
     "tslint-plugin-prettier": "latest",
     "tsutils": "^3.17.1",
     "tsutils-etc": "^1.3.1",
