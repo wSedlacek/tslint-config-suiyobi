@@ -196,7 +196,7 @@ module.exports = {
       deprecation: {
         severity: 'warn',
       },
-      'decorator-member-ordering': [
+      'member-ordering': [
         true,
         {
           alphabetize: true,
@@ -204,71 +204,31 @@ module.exports = {
             'public-constructor',
             'protected-constructor',
             'private-constructor',
-
             'public-static-field',
             'protected-static-field',
             'private-static-field',
-
-            'public-abstract-field',
-            'protected-abstract-field',
-            'private-abstract-field',
-
-            'public-abstract-accessor',
-            'protected-abstract-accessor',
-            'private-abstract-accessor',
-
-            'public-decorated-field',
-            'protected-decorated-field',
-            'private-decorated-field',
-
-            'public-decorated-accessor',
-            'protected-decorated-accessor',
-            'private-decorated-accessor',
-
-            'public-readonly-field',
-            'protected-readonly-field',
-            'private-readonly-field',
-
-            'public-static-accessor',
-            'protected-static-accessor',
-            'private-static-accessor',
-
             'public-instance-field',
             'protected-instance-field',
             'private-instance-field',
-
-            'public-instance-accessor',
-            'protected-instance-accessor',
-            'private-instance-accessor',
-
-            'ng-instance-method',
-
-            'public-decorated-method',
-            'protected-decorated-method',
-            'private-decorated-method',
-
-            'public-abstract-method',
-            'protected-abstract-method',
-            'private-abstract-method',
-
-            'public-instance-method',
-            'protected-instance-method',
-            'private-instance-method',
-
-            'public-static-accessor',
-            'protected-static-accessor',
-            'private-static-accessor',
-
             'public-static-method',
             'protected-static-method',
+            'public-static-accessor',
+            'protected-static-accessor',
             'private-static-method',
+            'private-static-accessor',
+            'public-instance-method',
+            'protected-instance-method',
+            'public-instance-accessor',
+            'protected-instance-accessor',
+            'private-instance-method',
+            'private-instance-accessor',
           ],
         },
       ],
       'function-name': [
         true,
         {
-          'function-regex': /^[a-z$][\w\d]+$/,
+          'function-regex': /^[A-Za-z$][\w\d]+$/,
           'method-regex': /^[a-z$][\w\d]+$/,
           'private-method-regex': /^[a-z$][\w\d]+$/,
           'protected-method-regex': /^[a-z$][\w\d]+$/,
@@ -292,7 +252,6 @@ module.exports = {
       'export-name': false,
       'interface-name': false,
       'max-classes-per-file': false,
-      'member-ordering': false,
       'no-empty': false,
       'no-floating-promises': false,
       'no-implicit-dependencies': false,
@@ -337,7 +296,7 @@ module.exports = {
       'no-duplicate-switch-case': true,
       'no-exec-script': true,
       'no-for-in': true,
-      'no-function-expression': true,
+      'no-function-expression': false,
       'no-http-string': true,
       'no-internal-module': true,
       'no-inner-html': true,
@@ -486,6 +445,11 @@ module.exports = {
           type: 'variable',
           modifiers: ['global', 'const'],
           format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
+        },
+        {
+          type: 'function',
+          modifiers: ['global', 'export'],
+          format: ['camelCase', 'PascalCase'],
         },
         {
           type: 'parameter',
