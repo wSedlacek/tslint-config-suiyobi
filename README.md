@@ -30,7 +30,7 @@ Supported modules are
 - `rxjs`
 - `tslint-override`
 
-### LTS
+## LTS
 
 Microsoft and other projects have chosen to move way from TSLint towards ESLint however in the Angular land that doesn't work very well at this time.
 I have chosen for Angular to continue using TSLint and attempt to keep this library up to date even if other libraries do not.
